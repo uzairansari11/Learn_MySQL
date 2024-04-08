@@ -45,3 +45,49 @@ SQL Commands Explanation:
     - This command removes the "dob" column from the "employee_table".
 
 This file contains a sequence of SQL commands demonstrating the creation, alteration, and deletion of columns in the "employee_table" within the "advance_queries" database.
+# SQL Commands Explanation
+
+This README file provides explanations for a series of SQL commands executed in a database environment.
+
+## Database Operations
+
+- `SHOW DATABASES;`: Displays the list of databases available in the database server.
+- `USE advance_queries;`: Switches to the database named "advance_queries".
+- `SHOW TABLES;`: Lists all tables in the current database.
+
+## Creation and Alteration of Tables
+
+- `CREATE TABLE employee_table ...`: Creates a table named "employee_table" with columns for ID, name, occupation, age, salary, and marital status.
+- `DESCRIBE employee_table;`: Shows the structure of the "employee_table" table.
+- `ALTER TABLE employee_table ...`: Modifies the structure of the "employee_table" by adding and renaming columns.
+- `ALTER TABLE employee_table DROP COLUMN dob;`: Removes the "dob" column from the "employee_table".
+- `ALTER TABLE employee ...`: Modifies the "employee" table by changing the data type of the "age" column and adding a check constraint for age between 18 and 70.
+
+## Data Manipulation and Views
+
+- `INSERT INTO employee ...`: Inserts records into the "employee" table.
+- `CREATE TABLE dummy_employee LIKE employee;`: Creates a new table "dummy_employee" with the same structure as "employee".
+- `INSERT INTO dummy_employee SELECT * FROM employee;`: Copies data from "employee" to "dummy_employee".
+- `DROP TABLE dummy_employee;`: Deletes the "dummy_employee" table.
+- `CREATE VIEW view1 AS SELECT ...`: Creates a view "view1" based on the "dummy_employee" table.
+
+## Foreign Keys and Relationships
+
+- `CREATE TABLE hobbies ...`: Defines a table "hobbies" with a foreign key referencing the "employee" table.
+- `DESCRIBE hobbies;`: Displays the structure of the "hobbies" table.
+
+## More Table Operations
+
+- `CREATE TABLE Person ...`: Creates a table "Person" with columns for ID, name, email, and city.
+- `DROP TABLE Person;`: Drops the "Person" table.
+- `INSERT INTO Person ...`: Inserts records into the "Person" table.
+- `REPLACE INTO PERSON ...`: Replaces or inserts records into the "Person" table.
+- `INSERT IGNORE INTO Person ...`: Inserts records into the "Person" table, ignoring duplicates.
+- `CREATE TABLE person_info ...`: Creates a table "person_info" to store information from the "Person" table.
+- `INSERT INTO person_info ...`: Inserts data from the "Person" table into the "person_info" table.
+
+## Retrieval Queries
+
+- `SELECT * FROM person_info;`: Retrieves all records from the "person_info" table.
+
+This README summarizes the SQL commands and their purposes in setting up tables, manipulating data, and querying information in the database environment.
